@@ -12,7 +12,6 @@ public class NickName {
         int l2=mon.length();
         int a= (int) (Math.random()*l1);
         int b= (int) (Math.random()*l2);
-        System.out.println(a);
         System.out.println(name.substring(a,name.length())+(mon.substring(b,mon.length())));
     }
 }
