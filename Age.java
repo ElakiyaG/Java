@@ -13,7 +13,7 @@ public class Age {
         if(curr_mon>=birth_mon && curr_year>=birth_year){
             System.out.println("Your Present Age is "+((curr_year-birth_year)));
         }
-        else if(curr_mon<=birth_mon || curr_year>=birth_year){
+        else if(curr_mon<birth_mon || curr_year>=birth_year){
             System.out.println("Your Present Age is "+((curr_year-birth_year)-1));
         }
         else{
