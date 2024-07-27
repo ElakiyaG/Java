@@ -10,13 +10,15 @@ public class Age {
         int birth_mon=scan.nextInt();
         System.out.println("Enter your Birth Year (yyyy): ");
         int birth_year=scan.nextInt();
-        if(curr_mon>=birth_mon && curr_year>=birth_year){
-            System.out.println("Your Present Age is "+((curr_year-birth_year)));
+        int n=String.valueOf(birth_year).length();
+        if (birth_mon<=12 && n==4) {
+            if (curr_mon >= birth_mon && curr_year >= birth_year) {
+                System.out.println("Your Present Age is " + ((curr_year - birth_year)));
+            } else if (curr_mon < birth_mon && curr_year >= birth_year) {
+                System.out.println("Your Present Age is " + ((curr_year - birth_year) - 1));
+            }
         }
-        else if(curr_mon<birth_mon || curr_year>=birth_year){
-            System.out.println("Your Present Age is "+((curr_year-birth_year)-1));
-        }
-        else{
+        else {
             System.out.println("Please check your Input!....");
         }
     }
