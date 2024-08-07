@@ -9,7 +9,10 @@ public class Multiplication_Table {
         System.out.println("Multiplication Table upto "+no+" Numbers ");
         for(int i=1;i<=no;i++){
             for(int j=1;j<=no;j++){
-                System.out.print((i*j)+" ");
+                int s=i*j;
+                int length = String.valueOf(s).length();
+                if(length==1) System.out.print(" 0"+s);
+                else System.out.print(" "+s);
             }
             System.out.println();
         }
